@@ -2,10 +2,13 @@ import { useState } from "react";
 
 const Login = () => {
 
-    let firstName = 'Monu';
-    let salary = 10.5;
-
-    const [empName, setEmpName] = useState('abc');
+    const [empName, setEmpName] = useState('');
+    
+    const handleEmpName = (evt) => {
+        console.log(evt.target.name);
+        console.log(evt.target.value);
+        setEmpName(evt.target.value);
+    };
 
     return (
         <div>
@@ -14,12 +17,11 @@ const Login = () => {
                 <p>EmpName: {empName}</p>
                 <p>Change EmpName</p>
                 <form>
-                    <input type="text" value={empName} />
+                    <input type="text" name="empName" value={empName} onChange={handleEmpName} />
                 </form>
             </div>
         </div>
     );
-
 };
 
 export default Login;
