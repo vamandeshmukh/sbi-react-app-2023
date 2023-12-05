@@ -24,7 +24,7 @@ const EmpData = () => {
 
     return (
         <div>
-            <p>Emp Component</p>
+            <h1>Emp Component</h1>
             <div>
                 <p>Please enter your details here.</p>
                 <form onSubmit={submitEmp}>
