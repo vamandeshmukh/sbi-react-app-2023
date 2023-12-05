@@ -1,5 +1,5 @@
 
-function App() {
+const App = () => {
 
   return (
     <div>
@@ -10,6 +10,19 @@ function App() {
 }
 
 export default App;
+
+
+// function App() {
+
+//   return (
+//     <div>
+//       <p>Hello world!</p>
+//     </div>
+//   );
+
+// }
+
+// export default App;
 
 
 // import logo from './logo.svg';
