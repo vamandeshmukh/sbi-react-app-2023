@@ -1,17 +1,21 @@
+import { useState } from "react";
 
 const Login = () => {
 
     let firstName = 'Monu';
     let salary = 10.5;
 
+    const [empName, setEmpName] = useState('abc');
 
     return (
         <div>
             <p>Login Component</p>
             <div>
-                <p>Employee data</p>
-                <p>First name: {firstName} </p>
-                <p>Salary: {salary}</p>
+                <p>EmpName: {empName}</p>
+                <p>Change EmpName</p>
+                <form>
+                    <input type="text" value={empName} />
+                </form>
             </div>
         </div>
     );
