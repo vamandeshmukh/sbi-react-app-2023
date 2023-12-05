@@ -7,7 +7,8 @@ const App = () => {
     <div>
       <p>App Component</p>
       <Login />
-      <Logout />
+      {/* this is a comment  */}
+      {/* <Logout /> */}
     </div>
   );
 
