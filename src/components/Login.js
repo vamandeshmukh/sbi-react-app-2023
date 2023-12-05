@@ -1,8 +1,6 @@
 
 const Login = () => {
 
-    // return ();
-
     return (
         <div>
             <p>Login Component</p>

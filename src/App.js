@@ -1,4 +1,5 @@
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 
 const App = () => {
 
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <p>App Component</p>
       <Login />
+      <Logout />
     </div>
   );
 
