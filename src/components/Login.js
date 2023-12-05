@@ -4,6 +4,7 @@ const Login = () => {
     let firstName = 'Monu';
     let salary = 10.5;
 
+
     return (
         <div>
             <p>Login Component</p>
