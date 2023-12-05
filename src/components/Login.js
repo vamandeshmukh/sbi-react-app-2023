@@ -13,6 +13,9 @@ const Login = () => {
         });
     };
 
+    // object destructuring - 
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
     const submitLogin = (evt) => {
         console.log(loginData);
         alert(`Hi ${loginData.username}! You've logged in successfully!`);
