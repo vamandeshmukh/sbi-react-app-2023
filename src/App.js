@@ -6,6 +6,7 @@ const App = () => {
   return (
     <div>
       <p>App Component</p>
+      <hr />
       <Login />
       {/* this is a comment  */}
       {/* <Logout /> */}
