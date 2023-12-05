@@ -15,11 +15,11 @@ const Login = () => {
     };
 
     const submitLogin = (evt) => {
-        console.log(loginData);
-        alert(`Hi ${loginData.username}! You've logged in successfully!`);
-        setLoginData({username: '', password: ''});
-        setLoginMessage(`Hi ${loginData.username}! You've logged in successfully!`);
-        evt.preventDefault();
+        console.log(loginData); // for testing 
+        alert(`Hi ${loginData.username}! You've logged in successfully!`); // for alert to the user 
+        setLoginData({username: '', password: ''}); // to clear form fields 
+        setLoginMessage(`You've logged in successfully!`); // screen message to the user 
+        evt.preventDefault(); // prevents from page reload 
     };
 
     return (
