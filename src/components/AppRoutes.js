@@ -7,6 +7,7 @@ import Login from './Login';
 import Logout from './Logout';
 import Page404 from './Page404';
 import ToolBar from './ToolBar';
+import BlogList from './BlogList';
 
 
 
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                 </>
                 <Routes>
                     <Route path='home' Component={Home} />
+                    <Route path='bloglist' Component={BlogList} />
                     <Route path='emp' Component={EmpData} />
                     <Route path='parent' Component={Parent} />
                     <Route path='login' Component={Login} />
