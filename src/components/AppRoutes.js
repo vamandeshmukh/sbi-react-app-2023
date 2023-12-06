@@ -17,6 +17,8 @@ const AppRoutes = () => {
                     <Route path='parent' Component={Parent}>Parent</Route>
                     <Route path='login' Component={Login}>Parent</Route>
                     <Route path='logout' Component={Logout}>Parent</Route>
+                    <Route path='' Component={Home}>Home</Route>
+                    <Route path='*' Component={Page404}>Home</Route>
                 </Routes>
             </BrowserRouter>
         </div>
