@@ -1,6 +1,9 @@
+import axios from "axios";
 import { useState } from "react";
 
 const Login = () => {
+
+    const backendUrl = 'https://jsonplaceholder.typicode.com/users';
 
     const [loginData, setLoginData] = useState({username: '', password: ''});
     const [loginMessage, setLoginMessage] = useState('');
@@ -15,6 +18,23 @@ const Login = () => {
     };
 
     const submitLogin = (evt) => {
+
+        // axios.get(backendUrl)
+        // .then()
+        // .catch();
+
+        // axios.get(backendUrl)
+        // .then(() => {})
+        // .catch(() => {});
+
+        axios.get(backendUrl)
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((error) => { console.log(error);});
+
+
+
         console.log(loginData); 
         if (loginData.username === 'Sonu' && loginData.password === 'Sonu') {
             setLoginData({username: '', password: ''}); 
@@ -46,6 +66,7 @@ const Login = () => {
 };
 
 export default Login;
+
 // import { useState } from "react";
 
 // const Login = () => {
