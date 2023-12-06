@@ -37,12 +37,12 @@ const Login = () => {
 
         axios.get(backendUrl)
         .then((response) => {
-
             response.data.forEach((obj) => {
                 console.log(loginData.username);
                 console.log(obj.username);
-                if (obj.username === loginData.username) {
-                    validLogin = true;
+                // if (obj.username === loginData.username && obj.username === loginData.password) {
+                    if (obj.username === loginData.username) {
+                        validLogin = true;
                 }
             });
             if (validLogin) {
