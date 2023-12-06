@@ -5,6 +5,7 @@ import Parent from './Parent';
 import Home from './Home';
 import Login from './Login';
 import Logout from './Logout';
+import Page404 from './Page404';
 
 const AppRoutes = () => {
 
