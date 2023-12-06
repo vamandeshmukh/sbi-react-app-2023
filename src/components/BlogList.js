@@ -20,7 +20,7 @@ const BlogList = () => {
             <p> {blogList.length} blogs found.</p>
             {
                 blogList.map((blog, k) => {
-                    return <p obj={blog} key={k}> {blog.title} <br /> {blog.body} </p>
+                    return <p obj={blog} key={k}> <b>{blog.title} </b> <br /> {blog.body} </p>
                 })
             }
 
