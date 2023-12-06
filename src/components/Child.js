@@ -1,9 +1,10 @@
 
-const Child = () => {
+const Child = (props) => {
 
     return (
         <>
-            <p>Child Component</p>
+            <h1>Child Component</h1>
+<p>Parent data in child component:{props.passData}</p>
         </>
     );
 };
