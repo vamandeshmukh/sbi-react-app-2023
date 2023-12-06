@@ -32,8 +32,8 @@ const EmpData = () => {
                 <div>
                     <p>Please enter your details here.</p>
                     <form onSubmit={submitEmp}>
-                        <label>Username: </label>
-                        <input type="text" name="username" value={emp.username} onChange={handleEmp} />
+                        <label>*Username: </label>
+                        <input type="text" name="username" value={emp.username} onChange={handleEmp} required placeholder="Please enter username" />
                         <br />
                         <label>First name: </label>
                         <input type="text" name="firstName" value={emp.firstName} onChange={handleEmp} />
@@ -47,8 +47,8 @@ const EmpData = () => {
                         <label>Phone: </label>
                         <input type="tel" name="phone" value={emp.phone} onChange={handleEmp} />
                         <br />
-                        <label>Email: </label>
-                        <input type="email" name="email" value={emp.email} onChange={handleEmp} />
+                        <label>*Email: </label>
+                        <input type="email" name="email" value={emp.email} onChange={handleEmp} required />
                         <br />
                         <input type="submit" value="Submit" />
                     </form>
