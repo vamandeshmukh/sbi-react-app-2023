@@ -11,7 +11,7 @@ const EmpData = () => {
     const handleEmp = (evt) => {
         console.log(evt.target.name);
         console.log(evt.target.value);
-        setDisplayEmp({ username: '', firstName: '', lastName: '', salary: '', phone: '', email: '' });
+        // setDisplayEmp({ username: '', firstName: '', lastName: '', salary: '', phone: '', email: '' });
         setEmp({
             ...emp,
             [evt.target.name]: evt.target.value
@@ -63,15 +63,21 @@ const EmpData = () => {
                     <p>{emp.email}</p>
                 </div>
                 <div>
-                    <p>Employee data as submitted:</p>
-                    {displayEmp && <div>
-                        <p>{displayEmp.username}</p>
-                        <p>{displayEmp.firstName}</p>
-                        <p>{displayEmp.lastName}</p>
-                        <p>{displayEmp.salary}</p>
-                        <p>{displayEmp.phone}</p>
-                        <p>{displayEmp.email}</p>
-                    </div>}
+                    {displayEmp &&
+                        <>
+                            <p>Employee data as submitted:</p>
+                            <p>{displayEmp.username}</p>
+                            <p>{displayEmp.firstName}</p>
+                            <p>{displayEmp.lastName}</p>
+                            <p>{displayEmp.salary}</p>
+                            <p>{displayEmp.phone}</p>
+                            <p>{displayEmp.email}</p>
+                        </>
+                    }
+                    <div>
+                        {(10 == 11) &&
+                            <div>{(10 + 20)}</div>}
+                    </div>
                 </div>
             </div>
         </div>
