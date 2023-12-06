@@ -18,6 +18,8 @@ const Login = () => {
     };
 
     const submitLogin = (evt) => {
+      
+        let validLogin = false;
 
         // axios.get(backendUrl)
         // .then()
@@ -27,23 +29,33 @@ const Login = () => {
         // .then(() => {})
         // .catch(() => {});
 
+        // axios.get(backendUrl)
+        // .then((response) => {
+        //     console.log(response);
+        // })
+        // .catch((error) => { console.log(error);});
+
         axios.get(backendUrl)
         .then((response) => {
-            console.log(response);
+
+            response.data.forEach((obj) => {
+                console.log(loginData.username);
+                console.log(obj.username);
+                if (obj.username === loginData.username) {
+                    validLogin = true;
+                }
+            });
+            if (validLogin) {
+                setLoginData({username: '', password: ''}); 
+                setLoginMessage(`You've logged in successfully!`); 
+                }
+                else {
+                    setLoginData({username: '', password: ''}); 
+                    setLoginMessage(`Invalid credentials!`);  
+                    }
         })
         .catch((error) => { console.log(error);});
 
-
-
-        console.log(loginData); 
-        if (loginData.username === 'Sonu' && loginData.password === 'Sonu') {
-            setLoginData({username: '', password: ''}); 
-            setLoginMessage(`You've logged in successfully!`); 
-            }
-            else {
-                setLoginData({username: '', password: ''}); 
-                setLoginMessage(`Invalid credentials!`);  
-                }
         evt.preventDefault();  
     };
 
