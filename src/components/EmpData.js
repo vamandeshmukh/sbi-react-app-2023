@@ -11,11 +11,11 @@ const EmpData = () => {
     const handleEmp = (evt) => {
         console.log(evt.target.name);
         console.log(evt.target.value);
-        // setDisplayEmp({ username: '', firstName: '', lastName: '', salary: '', phone: '', email: '' });
         setEmp({
             ...emp,
             [evt.target.name]: evt.target.value
         });
+        setDisplayEmp('');
     };
 
     const submitEmp = (evt) => {

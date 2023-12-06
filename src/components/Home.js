@@ -15,8 +15,7 @@ const Home = () => {
                 <div>
                     <div style={{
                         minHeight: "100vh",
-                        alignItems: 'center',
-                        justifyContent: 'right',
+                        textAlign: 'center',
                     }} >
                         <h1 >SBI IT React App</h1>
                         <Link style={{ textDecoration: 'none' }} to='/emp'>Enter...</Link>

@@ -46,6 +46,54 @@ const Login = () => {
 };
 
 export default Login;
+// import { useState } from "react";
+
+// const Login = () => {
+
+//     const [loginData, setLoginData] = useState({username: '', password: ''});
+//     const [loginMessage, setLoginMessage] = useState('');
+
+//     const handleLogin = (evt) => {
+//         console.log(evt.target.name);
+//         console.log(evt.target.value);
+//         setLoginData({
+//             ...loginData,
+//             [evt.target.name]: evt.target.value
+//         });
+//     };
+
+//     const submitLogin = (evt) => {
+//         console.log(loginData); 
+//         if (loginData.username === 'Sonu' && loginData.password === 'Sonu') {
+//             setLoginData({username: '', password: ''}); 
+//             setLoginMessage(`You've logged in successfully!`); 
+//             }
+//             else {
+//                 setLoginData({username: '', password: ''}); 
+//                 setLoginMessage(`Invalid credentials!`);  
+//                 }
+//         evt.preventDefault();  
+//     };
+
+//     return (
+//         <div>
+//             <p>Login Component</p>
+//             <div>
+//                 <p>Please login here.</p>
+//                 <form onSubmit={submitLogin}>
+//                     <input type="text" name="username" value={loginData.username} onChange={handleLogin} />
+//                     <br /><br />
+//                     <input type="password" name="password" value={loginData.password} onChange={handleLogin} />
+//                     <br /><br />
+//                     <input type="submit" value="Login" />
+//                 </form>
+//             </div>
+//             <p>{loginMessage}</p>
+//         </div>
+//     );
+// };
+
+// export default Login;
 
 
 // import { useState } from "react";
