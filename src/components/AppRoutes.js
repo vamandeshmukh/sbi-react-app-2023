@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { redirect } from "react-router-dom";
 import EmpData from './EmpData';
 import Parent from './Parent';
 import Home from './Home';
@@ -13,13 +13,13 @@ const AppRoutes = () => {
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path='home' Component={Home}>Home</Route>
-                    <Route path='emp' Component={EmpData}>Emp</Route>
-                    <Route path='parent' Component={Parent}>Parent</Route>
-                    <Route path='login' Component={Login}>Parent</Route>
-                    <Route path='logout' Component={Logout}>Parent</Route>
-                    <Route path='' Component={Home}>Home</Route>
-                    <Route path='*' Component={Page404}>Home</Route>
+                    <Route path='home' Component={Home} />
+                    <Route path='emp' Component={EmpData} />
+                    <Route path='parent' Component={Parent} />
+                    <Route path='login' Component={Login} />
+                    <Route path='logout' Component={Logout} />
+                    <Route exact path='' Component={Home} />
+                    <Route path='*' Component={Page404} />
                 </Routes>
             </BrowserRouter>
         </div>
