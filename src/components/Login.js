@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
     const backendUrl = 'https://jsonplaceholder.typicode.com/users';
+
+    const navigate = useNavigate();
 
     const [loginData, setLoginData] = useState({username: '', password: ''});
     const [loginMessage, setLoginMessage] = useState('');
@@ -47,7 +50,8 @@ const Login = () => {
             });
             if (validLogin) {
                 setLoginData({username: '', password: ''}); 
-                setLoginMessage(`You've logged in successfully!`); 
+                setLoginMessage(`You've logged in successfully!`);
+                navigate('/emp'); 
                 }
                 else {
                     setLoginData({username: '', password: ''}); 
@@ -72,7 +76,7 @@ const Login = () => {
                     <input type="submit" value="Login" />
                 </form>
             </div>
-            <p>{loginMessage}</p>
+            <p>Message:{loginMessage}</p>
         </div>
     );
 };
