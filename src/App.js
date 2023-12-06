@@ -1,6 +1,7 @@
 import EmpData from "./components/EmpData";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
+import Parent from "./components/Parent";
 
 const App = () => {
 
@@ -8,7 +9,8 @@ const App = () => {
     <div>
       <p>App Component</p>
       <hr />
-      <EmpData />
+      <Parent />
+      {/* <EmpData /> */}
       {/* this is a comment  */}
       {/* <Login /> */}
       {/* <Logout /> */}

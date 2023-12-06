@@ -2,9 +2,10 @@
 const Parent = () => {
 
     return (
-        <div>
+        <>
             <p>Parent Component</p>
-        </div>
+
+        </>
     );
 };
 
