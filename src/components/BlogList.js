@@ -18,6 +18,7 @@ const BlogList = () => {
         <div>
             <h1>All Blogs List</h1>
             <p> {blogList.length} blogs found. </p>
+            <p>Write youc ode here. </p>
         </div>
     );
 };
