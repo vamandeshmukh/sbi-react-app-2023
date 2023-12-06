@@ -17,8 +17,13 @@ const BlogList = () => {
     return (
         <div>
             <h1>All Blogs List</h1>
-            <p> {blogList.length} blogs found. </p>
-            <p>Write you code here. </p>
+            <p> {blogList.length} blogs found.</p>
+            {
+                blogList.map((blog, k) => {
+                    return <p obj={blog} key={k}> {blog.title} <br /> {blog.body} </p>
+                })
+            }
+
         </div>
     );
 };
