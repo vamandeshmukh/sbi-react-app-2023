@@ -6,12 +6,18 @@ import Home from './Home';
 import Login from './Login';
 import Logout from './Logout';
 import Page404 from './Page404';
+import ToolBar from './ToolBar';
+
+
 
 const AppRoutes = () => {
 
     return (
-        <div>
+        <>
             <BrowserRouter>
+                <>
+                    <ToolBar />
+                </>
                 <Routes>
                     <Route path='home' Component={Home} />
                     <Route path='emp' Component={EmpData} />
@@ -22,7 +28,7 @@ const AppRoutes = () => {
                     <Route path='*' Component={Page404} />
                 </Routes>
             </BrowserRouter>
-        </div>
+        </>
     );
 
 };
